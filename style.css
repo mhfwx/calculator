@@ -1,0 +1,48 @@
+:root {
+    --bg-color:#ffffff;
+  }
+
+
+  #container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+  
+  #number {
+    display: grid;
+    height: 400px;
+    width: 400px;
+    
+
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  .design{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    margin-top: 50px;
+
+  }
+
+  #control{
+    margin-left: -500px;
+  }
+
+  #io{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
