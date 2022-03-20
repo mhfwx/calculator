@@ -36,13 +36,18 @@ cell3.style.height='150px';
 cell3.innerText="=";
 container.appendChild(cell3).className = "grid-item";
 
-// gridItem = document.querySelectorAll('.grid-item');
-// for (let i=0;i<gridItem.length;i++){
-//   gridItem[i].addEventListener('mouseover',(e)=>{
-//     e.target.style.backgroundColor='red';
-    
-//   })
-// }
+gridItem = document.querySelectorAll('.grid-item');
+output = document.getElementById('output');
+var inputnumber = '';
+for (let i=0;i<gridItem.length;i++){
+   gridItem[i].addEventListener('click',(e)=>{
+    e.target.style.backgroundColor='red';
+    output.innerText+=e.target.innerText;
+
+   })
+ }
+
+
 
 // document.querySelector('#clear').addEventListener('click',()=>{
 
