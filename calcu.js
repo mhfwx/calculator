@@ -34,18 +34,40 @@ let cell3=document.createElement('button');
 cell3.style.width='150px';
 cell3.style.height='150px';
 cell3.innerText="=";
-container.appendChild(cell3).className = "grid-item";
+container.appendChild(cell3).className = "grid-item oper";
 
 gridItem = document.querySelectorAll('.grid-item');
 output = document.getElementById('output');
 var inputnumber = '';
 for (let i=0;i<gridItem.length;i++){
    gridItem[i].addEventListener('click',(e)=>{
-    e.target.style.backgroundColor='red';
-    output.innerText+=e.target.innerText;
+
+    inputnumber+=e.target.innerText;
+    output.innerText=inputnumber;
+    
 
    })
  }
+
+ document.querySelector('#clear').addEventListener('click',()=>{
+    output.innerText='';   
+     })
+
+oper = document.querySelectorAll('.oper');
+
+for (let i=0;i<oper.length;i++){
+    oper[i].addEventListener('click',
+    ()=>{
+        
+        inputnumber = operate(inputnumber.slice(0,-1));
+        
+        output.innerText=inputnumber;
+        inputnumber='';  
+
+        
+    });
+}
+
 
 
 
